@@ -3,5 +3,8 @@
  */
 
 (function () {
-    var app = angular.module("productManagement", []);
-})();
+    "use script";
+    var app =
+        angular
+            .module("productManagement", []);
+}());
