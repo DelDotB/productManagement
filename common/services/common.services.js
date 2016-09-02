@@ -3,7 +3,7 @@
  */
 
 (function () {
-    "use script";
+    "use strict";
 
         angular
             .module(

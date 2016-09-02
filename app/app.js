@@ -3,11 +3,24 @@
  */
 
 (function () {
-    "use script";
+    "use strict";
     var app =
         angular
             .module(
                 "productManagement", // module name
-                ["common.services", "productResourceMock"] // dependancies
+                ["common.services", "ui.router", "productResourceMock"] // dependancies
             );
+
+    app.config(["$stateProvider",
+        function ($stateProvider) {
+          $stateProvider
+            // products
+              .state("productList", {
+                  url: "/products",
+                  templateUrl: "app/products/productListView.html",
+                  controller: "ProductListCtrl as vm"
+              });
+        }]
+    );
+    
 }());

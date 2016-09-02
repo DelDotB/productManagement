@@ -18,12 +18,7 @@
             vm.products = data;
         });
 
-
         vm.showImage = false;
-
-/*        vm.testList = function productResource($resource) {
-            return $resource("https://odatatest.utmb.edu/histedit/HistoricalEdits?$top=5");
-        }*/
 
         vm.toggleImage = function () {
           vm.showImage = !vm.showImage;

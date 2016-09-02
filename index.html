@@ -1,74 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Acme Product Management</title>
+    <head>
+        <meta charset="UTF-8">
+        <title>Acme Product Management</title>
 
-    <!-- stylesheets -->
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/app.css">
+        <!-- stylesheets -->
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/app.css">
 
-    <!-- library scripts -->
-    <script src="js/angular.js"></script>
-    <script src="js/angular-resource.min.js"></script>
-    <script src="js/angular-mocks.js"></script>
+        <!-- library scripts -->
+        <script src="js/angular.js"></script>
+        <script src="js/angular-resource.min.js"></script>
+        <script src="js/angular-mocks.js"></script>
+        <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
 
-    <!-- application script -->
-    <script src="app/app.js"></script>
+        <!-- application script -->
+        <script src="app/app.js"></script>
 
-    <!-- Services -->
-    <script src="common/services/common.services.js"></script>
-    <script src="common/services/productResource.js"></script>
-    <script src="common/services/productResourceMock.js"></script>
+        <!-- Services -->
+        <script src="common/services/common.services.js"></script>
+        <script src="common/services/productResource.js"></script>
+        <script src="common/services/productResourceMock.js"></script>
 
-    <!--Product Controllers-->
-    <script src="app/products/productListCtrl.js"></script>
+        <!--Product Controllers-->
+        <script src="app/products/productListCtrl.js"></script>
 
 
-</head>
-<body ng-app="productManagement">
-<div class="panel panel-primary">
-    <div class="panel-heading" style="font-size: large;">Product List</div>
-
-    <div class="panel-body">
-        <table class="table" ng-controller="ProductListCtrl as vm">
-            <thead>
-            <tr>
-                <td>
-                    <button type="button" class="btn btn-primary" ng-click="vm.toggleImage()">
-                        {{vm.showImage ? "Hide": "Show" }} Image
-                    </button>
-                </td>
-                <td>Product</td>
-                <td>Code</td>
-                <td>Available</td>
-                <td>Price</td>
-            </tr>
-            </thead>
-            <tbody>
-            <tr ng-repeat="product in vm.products">
-                <td>
-                    <img ng-src="{{product.imageUrl}}" ng-if="vm.showImage"
-                         style="width:50px; margin:2px;" title="{{product.productName}}">
-                </td>
-                <td>{{product.productName}}</td>
-                <td>{{product.productCode}}</td>
-                <td>{{product.releaseDate}}</td>
-                <td>{{product.price | currency}}</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-
-<!--    <div class="panel-body">
-        <div ng-controller="ProductListCtrl as vm">
-            <div ng-repeat="test in vm.testList">
-                {{test.Id}} - {{test.TrackingNum}} - {{test.PersonNum}} - {{test.PersonFullName}} <br/>
-            </div>
-            {{}}
+    </head>
+    <body ng-app="productManagement">
+        <div class="container">
+            <div ui-view></div>
         </div>
-    </div>-->
-
-</div>
-</body>
+    </body>
 </html>
