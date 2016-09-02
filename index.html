@@ -4,13 +4,24 @@
     <meta charset="UTF-8">
     <title>Acme Product Management</title>
 
+    <!-- stylesheets -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/app.css">
 
+    <!-- library scripts -->
     <script src="js/angular.js"></script>
+    <script src="js/angular-resource.min.js"></script>
+    <script src="js/angular-mocks.js"></script>
+
+    <!-- application script -->
     <script src="app/app.js"></script>
 
-    <!--PRoduct COntrollers-->
+    <!-- Services -->
+    <script src="common/services/common.services.js"></script>
+    <script src="common/services/productResource.js"></script>
+    <script src="common/services/productResourceMock.js"></script>
+
+    <!--Product Controllers-->
     <script src="app/products/productListCtrl.js"></script>
 
 
@@ -48,6 +59,16 @@
             </tbody>
         </table>
     </div>
+
+<!--    <div class="panel-body">
+        <div ng-controller="ProductListCtrl as vm">
+            <div ng-repeat="test in vm.testList">
+                {{test.Id}} - {{test.TrackingNum}} - {{test.PersonNum}} - {{test.PersonFullName}} <br/>
+            </div>
+            {{}}
+        </div>
+    </div>-->
+
 </div>
 </body>
 </html>

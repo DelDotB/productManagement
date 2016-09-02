@@ -6,5 +6,8 @@
     "use script";
     var app =
         angular
-            .module("productManagement", []);
+            .module(
+                "productManagement", // module name
+                ["common.services", "productResourceMock"] // dependancies
+            );
 }());
