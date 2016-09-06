@@ -8,7 +8,10 @@
 		angular
 			.module(
 				"productManagement", // module name
-				["common.services", "ui.router", "productResourceMock"] // dependancies
+				["common.services",
+					"ui.router",
+					"ui.mask",
+					"productResourceMock"] // dependancies
 			);
 
 	app.config(["$stateProvider", "$urlRouterProvider",
